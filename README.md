@@ -4,6 +4,9 @@ Control Interface Backes Müller Active Speakers
 ## Hardware
 
 #### RS-232 of Backer & Müller Active Speakers "BM-Line 12"
+Thanks to their internal signal processing these speaker provide the option of programming frequency response into their DSP to compensate for room acoustics. The benefit of doing this in the speakers and not in the amp is phase linearity. Linear phase is always preserved and not touched by any setting.
+
+Additionally it is possible to adjust the sweet spot by adding some delay to one channel. In practice this setting has proven to have a great effect on the sound. Even a slight missadjustment destroys the impression of sound comming exactly from the midst "and not from the speakers".
 
 The speakers have a [RJ-45](https://en.wikipedia.org/wiki/Modular_connector#8P8C) plug for remote control and programming. but it's not Ethernet, its RS-232. Each speaker has a control input and a control output for daisy-chaining. Each speaker has a number: 1 for left, 2 for right. All this and much more is coded on the little SD-card on the back-side.
 
