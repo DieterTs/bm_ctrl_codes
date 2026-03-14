@@ -8,9 +8,7 @@ Thanks to their internal signal processing these speaker provide the option of p
 
 Additionally it is possible to adjust the sweet spot by adding some delay to one channel. In practice this setting has proven to have a great effect on the sound. Even a slight missadjustment destroys the impression of sound comming exactly from the midst "and not from the speakers".
 
-The speakers have a [RJ-45](https://en.wikipedia.org/wiki/Modular_connector#8P8C) plug for remote control and programming. but it's not Ethernet, its RS-232. Each speaker has a control input and a control output for daisy-chaining. Each speaker has a number: 1 for left, 2 for right. All this and much more is coded on the little SD-card on the back-side.
-
-In contrast to normal speakers which can be exchanged without any effect, these speakers "know" about their channel, left or right. This is necessary when driving them with a common AES digital signal, which covers both channels. Then each speaker plays the correct channel out of the digital audio data stream.
+The speakers have a [RJ-45](https://en.wikipedia.org/wiki/Modular_connector#8P8C) plug for remote control and programming. But it's not Ethernet, its RS-232. Each speaker has a control input and a control output for daisy-chaining. Each speaker has a number: 1 for left, 2 for right. All this and much more is coded on the little SD-card on the back-side.
 
 | Pin | Color | Function |
 | --- | --- | --- |
@@ -50,3 +48,5 @@ Each speaker accepts a query or config line and always responds with a status li
 | EQx | 3 \<F> \<G> | High frequency (Treble).<br/>F = above this frequency boost/damp starts over 3 octaves.<br/>G = final boost/damp in dB, -12.0 ... 12.0.<br/>e.g. with F = 1 kHz and G = -3 dB level is -1 dB @ 2 kHz, -2 dB @ 4 kHz and -3 dB above 8 kHz |
 | DELAY0 | 0.0 ... 30.0 | If one speaker is closer to the listener than the other, its signal can be delayed as a compensation in milliseconds.<br/>Usually this value should only be applied on one of both speakers.<br/>30 milliseconds are quivalent to 10 meters. |
 | SUB0 | 0 0.0 | For additional subwoofer(s). On/Off and level. |
+
+Usually these parameters are programmed using a "Pegel Programmier Gerät" (PPG). The PPG provides access to the first 6 parametric EQs and to delay control. The EQs 6...9 are not accessible. EQs 0...5 always work in mode 1 as parametric equalizers. Bass and Treble control are not provided. Perhaps these functions are reserved for the special pre-amp from the same firm. Maybe it does no own signal processing and leaves it to EQs 6...9, using filter mode 2 for bass control and filter mode 3 for treble. This pre-amp also controls volume. This is a great advantage compared to volume control in the pre-amp because the speaker is always driven with full scale level and attenuation is done internaly with a high precicion low distortion analog volume control. This way the full digital processing resolution is always used and noise coupling into the cables is reduced.
